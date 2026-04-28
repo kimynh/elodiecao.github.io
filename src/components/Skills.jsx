@@ -10,7 +10,7 @@ const skills = [
     icon: <Server size={28} className="text-primary" />, label: "Web & Backend", items: ["React", "Next.js", "HTML", "CSS", "Django", "API REST"],
   },
   {
-    icon: <Database size={28} className="text-primary" />, label: "Data", items: ["PostgreSQL", "Analyse de données"],
+    icon: <Database size={28} className="text-primary" />, label: "Data", items: ["PostgreSQL", "Analyse de données", "Excel"],
   },
   {
     icon: <GitBranch size={28} className="text-primary" />, label: "Outils", items: ["Git", "GitLab CI/CD", "Docker", "SVN"],
