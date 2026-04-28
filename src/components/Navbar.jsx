@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Sparkles, X } from "lucide-react";
 
 const navLinks = [
   { href: "#hero", label: "Accueil" },
@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#skills", label: "Compétences" },
   { href: "#projects", label: "Projets" },
   { href: "#experience", label: "Expérience" },
+  { href: "#harp", label: "Harpe" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -19,26 +20,38 @@ export default function Navbar() {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-glass/80 shadow-glass"
+      className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6"
     >
-      <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
-        <a href="#hero" className="text-xl font-bold tracking-tight text-primary">
-          Elodie Cao
+      <div className="soft-card mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-6">
+        <a href="#hero" className="flex items-center gap-3 text-primary transition-colors">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-sm font-bold text-white">
+            EC
+          </span>
+          <span>
+            <span className="block text-sm font-semibold tracking-tight">Elodie Cao</span>
+            <span className="block text-xs text-stone-500">L3 MIAGE • Master à la rentrée</span>
+          </span>
         </a>
-        <div className="hidden md:flex gap-6">
+        <div className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="relative px-2 py-1 font-medium text-white hover:text-primary transition-colors"
+              className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition-colors hover:bg-white hover:text-primary"
             >
               {link.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </a>
           ))}
+          <a
+            href="#experience"
+            className="ml-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+          >
+            <Sparkles size={16} />
+            Hyvilo en mai
+          </a>
         </div>
         <button
-          className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="rounded-2xl border border-border bg-white/80 p-2 text-primary shadow-soft focus:outline-none focus:ring-2 focus:ring-primary md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Ouvrir le menu"
         >
@@ -50,18 +63,25 @@ export default function Navbar() {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
-          className="md:hidden flex flex-col items-center gap-4 pb-4"
+          className="soft-card mx-auto mt-2 flex max-w-6xl flex-col gap-2 p-4 md:hidden"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-lg font-medium text-white hover:text-primary transition-colors"
+              className="rounded-2xl px-4 py-3 text-base font-medium text-stone-700 transition-colors hover:bg-white hover:text-primary"
               onClick={() => setOpen(false)}
             >
               {link.label}
             </a>
           ))}
+          <a
+            href="#experience"
+            className="rounded-2xl bg-primary px-4 py-3 text-base font-semibold text-white"
+            onClick={() => setOpen(false)}
+          >
+            Nouveau stage Hyvilo
+          </a>
         </motion.div>
       )}
     </motion.nav>

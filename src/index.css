@@ -2,16 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color: #221f1a;
+  background: #f6f0e8;
+}
+
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: #18181b;
+  font-family: "Manrope", "Inter", "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 30%),
+    radial-gradient(circle at top right, rgba(79, 70, 229, 0.08), transparent 24%),
+    linear-gradient(180deg, #fbf7f1 0%, #f5ede2 52%, #f2eadf 100%);
+  color: #221f1a;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(34, 31, 26, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 31, 26, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.28), transparent 72%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(79, 70, 229, 0.18);
+  color: #111827;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 7rem;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-primary md:text-5xl;
+  }
+
+  .section-copy {
+    @apply mt-3 max-w-2xl text-base leading-7 text-stone-600 md:text-lg;
+  }
+
+  .soft-card {
+    @apply rounded-3xl border border-white/80 bg-glass shadow-panel backdrop-blur-xl;
+  }
+
+  .pill-tag {
+    @apply inline-flex items-center rounded-full border border-stone-300/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-stone-300/80 bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-stone-500;
+  }
 }
 
 ::-webkit-scrollbar {
   width: 8px;
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #23272f;
+  background: rgba(117, 107, 95, 0.32);
   border-radius: 8px;
 }

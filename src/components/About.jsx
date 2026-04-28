@@ -3,26 +3,34 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="max-w-4xl mx-auto px-6 py-20">
-      <motion.h2
+    <section id="about" className="section-shell">
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="text-3xl md:text-4xl font-bold mb-6 text-primary"
+        transition={{ duration: 0.8 }}
+        className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]"
       >
-        À propos
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9 }}
-        className="text-lg md:text-xl text-gray-200 leading-relaxed bg-glass rounded-xl p-6 shadow-glass"
-      >
-        Je m’appelle Elodie Cao, actuellement en L3 MIAGE à l’Université Paris Cité. Mon parcours m’a permis de développer une double compétence en développement logiciel et en gestion de projet IT, avec une forte appétence pour l’analyse de données et les systèmes d’information bancaires et financiers.<br /><br />
-        Rigoureuse, curieuse et passionnée, je souhaite rejoindre une équipe dynamique en alternance à partir de septembre 2026 pour contribuer à des projets innovants, tout en continuant à apprendre et à progresser dans le domaine du numérique.
-      </motion.p>
+        <div>
+          <span className="eyebrow">À propos</span>
+          <h2 className="section-title mt-5">
+            Un profil hybride entre rigueur académique, sens du produit et exécution technique.
+          </h2>
+        </div>
+        <div className="soft-card p-6 md:p-8">
+          <p className="text-base leading-8 text-stone-600 md:text-lg">
+            Je suis actuellement en L3 MIAGE à l’Université Paris Cité et j’entrerai en Master MIAGE à la rentrée 2026. Mon parcours me permet de faire le lien entre développement logiciel, analyse de données et compréhension des besoins métier, avec un intérêt marqué pour les systèmes d’information.
+          </p>
+          <p className="mt-5 text-base leading-8 text-stone-600 md:text-lg">
+            J’aime les projets bien pensés, les interfaces lisibles et les équipes où l’on construit avec méthode. Mon stage à venir chez Hyvilo en mai 2026 s’inscrit dans cette continuité avant une alternance à partir de septembre 2026.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="pill-tag">Université Paris Cité</span>
+            <span className="pill-tag">MIAGE</span>
+            <span className="pill-tag">Développement & SI</span>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

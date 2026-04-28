@@ -37,36 +37,39 @@ const item = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-5xl mx-auto px-6 py-20">
-      <motion.h2
+    <section id="skills" className="section-shell">
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-3xl md:text-4xl font-bold mb-10 text-primary"
+        className="mb-10"
       >
-        Compétences
-      </motion.h2>
+        <span className="eyebrow">Compétences</span>
+        <h2 className="section-title mt-5">Des bases solides pour concevoir, développer et structurer.</h2>
+      </motion.div>
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
       >
-        {skills.map((skill, idx) => (
+        {skills.map((skill) => (
           <motion.div
             key={skill.label}
             variants={item}
-            className="bg-glass rounded-xl shadow-glass p-6 flex flex-col items-center group hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+            className="soft-card flex flex-col gap-5 p-6"
           >
-            <div className="mb-3">{skill.icon}</div>
-            <h3 className="font-semibold text-lg mb-2 text-accent">{skill.label}</h3>
-            <ul className="flex flex-wrap gap-2 justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f4efe8]">
+              {skill.icon}
+            </div>
+            <h3 className="text-xl font-semibold text-primary">{skill.label}</h3>
+            <ul className="flex flex-wrap gap-2">
               {skill.items.map((el) => (
                 <li
                   key={el}
-                  className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/30 animate-pulse group-hover:animate-none"
+                  className="rounded-full border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-600"
                 >
                   {el}
                 </li>

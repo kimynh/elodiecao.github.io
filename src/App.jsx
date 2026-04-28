@@ -5,6 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Harp from "./components/Harp";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -19,15 +20,16 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-[#18181b] via-[#23272f] to-[#1e293b] min-h-screen text-white font-sans relative">
+    <div className="min-h-screen font-sans text-text relative overflow-x-hidden">
       {loading && <Loader />}
       <Navbar />
-      <main className="pt-20">
+      <main className="relative z-10 pt-24 pb-8">
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Experience />
+        <Harp />
         <Contact />
         <ScrollToTop />
       </main>

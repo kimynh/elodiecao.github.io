@@ -5,39 +5,84 @@ import { ServerCog, Zap, Database, BarChart3, Briefcase } from "lucide-react";
 const projects = [
   {
     icon: <ServerCog size={28} className="text-accent" />,
-    title: "Plateforme de recrutement avec ATS",
+    title: "Développement d’une plateforme de recrutement intelligente (ATS)",
+    org: "Université Paris Cité",
+    date: "Janvier 2026 – aujourd’hui",
     description:
-      "Application fullstack Next.js + API Python pour la gestion du recrutement. Authentification sécurisée (candidat/recruteur), modélisation avancée de la base de données, containerisation Docker.",
-    stack: ["Next.js", "Python", "Docker", "PostgreSQL", "REST API"],
+      "Projet d’équipe mené dans le cadre de la Licence Informatique pour simplifier le processus de recrutement pour les candidats et les recruteurs via une application web.",
+    details: [
+      "Conception d’un espace candidat avec vue détaillée des offres et filtres par localisation, type de contrat ou durée.",
+      "Intégration du dépôt de CV avec analyse en temps réel et score de matching avec les offres.",
+      "Création d’un espace RH avec tableau de bord, suivi des candidatures, classement automatisé des profils et gestion des offres.",
+      "Développement d’un moteur de scoring fondé sur la détection de compétences clés et l’adéquation formation/expérience.",
+    ],
+    stack: ["PostgreSQL", "Python", "React", "Analyse de CV", "Matching", "Base de données", "Produit web"],
     main: true,
   },
   {
     icon: <Zap size={28} className="text-accent" />,
     title: "Projet Java – Réseau de distribution d’électricité",
+    org: "Université Paris Cité",
+    date: "Octobre 2025 – Décembre 2025",
     description:
-      "Modélisation orientée objet d’un réseau, optimisation algorithmique et tests unitaires JUnit.",
-    stack: ["Java", "JUnit", "UML"],
+      "Projet de programmation visant à concevoir et optimiser un réseau de distribution d’électricité à partir de contraintes réelles.",
+    details: [
+      "Modélisation orientée objet des entités du système : générateurs, maisons et connexions.",
+      "Calcul du coût global du réseau avec équilibrage des charges et pénalités de surcharge.",
+      "Création et gestion du réseau via un menu interactif.",
+      "Lecture, validation et sauvegarde de réseaux depuis des fichiers.",
+      "Gestion rigoureuse des erreurs et exceptions.",
+      "Implémentation d’un algorithme automatique d’optimisation des connexions.",
+    ],
+    stack: ["Java", "JavaFX", "POO", "Algorithmes", "Gestion d’exceptions"],
   },
   {
     icon: <Database size={28} className="text-accent" />,
     title: "Projet Java – Mini SGBD relationnel",
+    org: "Université Paris Cité",
+    date: "Septembre 2025 – Décembre 2025",
     description:
-      "Développement d’un mini SGBD avec CRUD, requêtes SQL et persistance des données.",
-    stack: ["Java", "SQL"],
+      "Développement d’un mini système de gestion de base de données en Java pour reproduire les mécanismes de base d’un SGBD relationnel.",
+    details: [
+      "Création et gestion de tables, avec insertion, suppression et mise à jour des données.",
+      "Exécution de requêtes simples et traitement de scripts de commandes.",
+      "Gestion des données via des fichiers pour assurer la persistance.",
+      "Mise en pratique de l’architecture interne d’un SGBD et de la programmation orientée objet.",
+      "Implémentation d’un moteur d’exécution de commandes et manipulation de structures de données.",
+    ],
+    stack: ["Java", "POO", "SGBD", "Persistance", "Structures de données"],
   },
   {
     icon: <BarChart3 size={28} className="text-accent" />,
-    title: "Comparaison moteurs 3D (Unity vs Unreal)",
+    title: "Projet 3D et codage – Comparaison de moteurs 3D (Unity & Unreal Engine)",
+    org: "Université Paris Cité",
+    date: "Janvier 2025 – Mars 2025",
     description:
-      "Gestion de projet Agile, développement C++ et analyse de performance sur Unity et Unreal Engine.",
-    stack: ["C++", "Agile", "Unity", "Unreal"],
+      "Projet de groupe visant à comparer deux moteurs de rendu et de simulation 3D à travers le développement de scénarios interactifs.",
+    details: [
+      "Développement de fonctionnalités en C++, notamment sur Unreal Engine.",
+      "Conception d’un menu interactif intégrant un mini-jeu de tir avec personnage.",
+      "Génération procédurale d’un terrain aléatoire.",
+      "Mise en place d’éléments graphiques : feu, éclairage, cycle jour/nuit et lampe de poche.",
+      "Analyse de la qualité des déplacements et des interactions des personnages.",
+      "Réalisation de vidéos tutoriels et comparaison des performances, avantages et limites des deux moteurs.",
+    ],
+    stack: ["C++", "Unity", "Unreal Engine", "3D", "Gameplay", "Rendu temps réel"],
   },
   {
     icon: <Briefcase size={28} className="text-accent" />,
-    title: "Stage en consulting informatique (Airbus)",
+    title: "Outils d’analyse pour la gestion des stocks Airbus",
+    org: "ERPsoft Consulting",
+    date: "Juillet 2024 – Août 2024",
     description:
-      "Analyse de données, automatisation VBA et recueil des besoins métiers pour Airbus.",
-    stack: ["VBA", "Data", "Consulting"],
+      "Conception d’outils d’analyse pour la gestion des stocks de composants Airbus, avec automatisation VBA, analyse de données critiques et coordination avec les équipes métiers.",
+    details: [
+      "Création de logiciels d’analyse pour le suivi de stocks de composants Airbus.",
+      "Automatisation de processus en VBA avec une réduction de 25 % du temps de traitement.",
+      "Analyse de données critiques liées aux processus métier.",
+      "Coordination avec les équipes pour traduire les besoins opérationnels en solutions techniques.",
+    ],
+    stack: ["VBA", "Analyse de données", "Processus métier", "Gestion des stocks", "Coordination"],
   },
 ];
 
@@ -52,37 +97,53 @@ const cardVariants = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-20">
-      <motion.h2
+    <section id="projects" className="section-shell">
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-3xl md:text-4xl font-bold mb-10 text-primary"
+        className="mb-10"
       >
-        Projets
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, idx) => (
+        <span className="eyebrow">Projets</span>
+        <h2 className="section-title mt-5">Une sélection de projets concrets, du backend aux sujets plus exploratoires.</h2>
+      </motion.div>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        {projects.map((project) => (
           <motion.div
             key={project.title}
-            className={`relative bg-glass rounded-xl shadow-glass p-6 flex flex-col gap-3 group border border-transparent hover:border-primary/40 transition-all duration-300 ${project.main ? "md:col-span-2" : ""}`}
+            className={`soft-card relative flex flex-col gap-4 p-6 transition-transform duration-300 hover:-translate-y-1 ${project.main ? "md:col-span-2" : ""}`}
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
-            whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 rgba(56,189,248,0.18)" }}
           >
-            <div className="mb-2">{project.icon}</div>
-            <h3 className="font-semibold text-xl mb-1 text-accent">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f4efe8]">
+              {project.icon}
+            </div>
+            <h3 className="text-xl font-semibold text-primary">
               {project.title}
             </h3>
-            <p className="text-gray-200 mb-2">{project.description}</p>
+            <div className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-400">
+              {project.date}
+            </div>
+            <p className="text-sm font-semibold text-stone-500">{project.org}</p>
+            <p className="text-stone-600">{project.description}</p>
+            {project.details ? (
+              <ul className="space-y-2 text-sm leading-7 text-stone-600">
+                {project.details.map((detail) => (
+                  <li key={detail} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
             <div className="flex flex-wrap gap-2 mt-auto">
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary/30"
+                  className="rounded-full border border-stone-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-stone-500"
                 >
                   {tech}
                 </span>

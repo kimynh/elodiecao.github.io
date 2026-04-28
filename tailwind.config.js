@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -8,15 +7,30 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "Segoe UI", "Arial", "sans-serif"],
+        sans: ["Manrope", "Inter", "Segoe UI", "Arial", "sans-serif"],
+        display: ["Instrument Serif", "Georgia", "serif"],
       },
       colors: {
-        primary: '#38bdf8',
-        accent: '#a78bfa',
-        glass: 'rgba(30,41,59,0.7)',
+        primary: "#111827",
+        accent: "#4f46e5",
+        beige: "#f6f0e8",
+        cream: "#fffdf8",
+        taupe: "#756b5f",
+        card: "#fffdf8",
+        border: "#dfd6ca",
+        text: "#221f1a",
+        glass: "rgba(255,253,248,0.78)",
+        muted: "#6b7280",
       },
       boxShadow: {
-        glass: '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+        soft: "0 20px 60px rgba(26, 26, 26, 0.08)",
+        glass: "0 24px 80px rgba(26, 26, 26, 0.1)",
+        panel: "0 32px 80px rgba(20, 20, 20, 0.08)",
+      },
+      borderRadius: {
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
     },
   },

@@ -4,37 +4,35 @@ import { Mail, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="max-w-3xl mx-auto px-6 py-20">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="text-3xl md:text-4xl font-bold mb-8 text-primary"
-      >
-        Contact
-      </motion.h2>
+    <section id="contact" className="section-shell">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9 }}
-        className="bg-glass rounded-xl shadow-glass p-8 flex flex-col items-center gap-6"
+        className="soft-card p-8 md:p-10"
       >
-        <a
-          href="mailto:elodie.cao@email.com"
-          className="flex items-center gap-2 text-lg text-white hover:text-primary font-medium transition-colors"
-        >
-          <Mail size={22} /> elodie.cao@email.com
-        </a>
-        <a
-          href="https://www.linkedin.com/in/elodie-cao-miage"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-lg text-white hover:text-primary font-medium transition-colors"
-        >
-          <Linkedin size={22} /> linkedin.com/in/elodie-cao-miage
-        </a>
+        <span className="eyebrow">Contact</span>
+        <h2 className="section-title mt-5">Discutons de votre équipe, d’un stage ou d’une alternance.</h2>
+        <p className="section-copy">
+          Je suis ouverte aux échanges autour des systèmes d’information, du développement et des opportunités pour 2026.
+        </p>
+        <div className="mt-8 flex flex-col gap-4">
+          <a
+            href="mailto:elodiecao05@gmail.com"
+            className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-5 py-4 text-base font-semibold text-primary transition-colors hover:border-primary/40"
+          >
+            <Mail size={20} /> elodiecao05@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/elodie-cao-674075298"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-5 py-4 text-base font-semibold text-primary transition-colors hover:border-primary/40"
+          >
+            <Linkedin size={20} /> linkedin.com/in/elodie-cao-674075298
+          </a>
+        </div>
       </motion.div>
     </section>
   );
