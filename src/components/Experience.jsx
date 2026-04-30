@@ -42,10 +42,9 @@ const experiences = [
     location: "Soisy-sur-Seine · Sur site",
     description: "Création d’outils d’analyse pour la gestion des stocks de composants Airbus.",
     details: [
-      "Pilotage du calendrier et respect des délais de livraison des outils d’analyse.",
-      "Automatisation de processus en VBA, avec une réduction de 25 % du temps de traitement.",
-      "Analyse de données critiques liées à la gestion des stocks Airbus.",
-      "Recueil des besoins et coordination avec les équipes métiers pour garantir l’adéquation technique.",
+      "Analyse et suivi des données BCP liées à la migration SAP/EIS d'Airbus : stocks, commandes, configuration système",
+      "Automatisation VBA et traitement Excel des fichiers de suivi techniques",
+      "Création de logiciels d'analyse pour la gestion des stocks de composants Airbus",
     ],
     stack: ["VBA", "Analyse de données", "Gestion de projet", "Processus métier"],
   },
