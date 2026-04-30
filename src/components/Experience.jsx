@@ -46,7 +46,7 @@ const experiences = [
       "Automatisation VBA et traitement Excel des fichiers de suivi techniques",
       "Création de logiciels d'analyse pour la gestion des stocks de composants Airbus",
     ],
-    stack: ["VBA", "Analyse de données", "Gestion de projet", "Processus métier"],
+    stack: ["VBA", "Analyse de données", "Gestion de projet", "Processus métier", "Excel"],
   },
   {
     icon: <School size={22} className="text-primary" />,
