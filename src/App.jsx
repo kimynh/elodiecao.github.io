@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Harp from "./components/Harp";
+import Alternance from "./components/Alternance";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -25,6 +26,7 @@ function App() {
       <Navbar />
       <main className="relative z-10 pt-24 pb-8">
         <Hero />
+        <Alternance />
         <About />
         <Skills />
         <Projects />
