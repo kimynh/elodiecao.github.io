@@ -45,8 +45,8 @@ export default function Alternance() {
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600 md:text-lg">
           Après mon stage chez Hyvilo cet été, je rejoindrai l'une de ces deux
-          formations d'excellence à la rentrée 2026. Pour décrocher ma place —
-          notamment à Dauphine — j'ai besoin d'un contrat d'alternance. Je suis
+          formations d'excellence à la rentrée 2026. Pour décrocher ma place
+          notamment à Dauphine, j'ai besoin d'un contrat d'alternance. Je suis
           à la recherche d'une entreprise où je pourrai contribuer concrètement
           tout en montant en compétences sur le développement et les systèmes
           d'information.
