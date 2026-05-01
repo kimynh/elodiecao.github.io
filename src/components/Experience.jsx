@@ -14,7 +14,6 @@ const experiences = [
       "Développement front-end en JavaScript et React pour les interfaces back-office et front-office.",
       "Conception de composants back-end en Python et Django.",
       "Écriture de tests unitaires et fonctionnels, avec versioning Git et CI/CD sur GitLab.",
-      "Participation aux réunions techniques et à l’avancement de la solution avec l’équipe.",
     ],
     stack: ["React", "JavaScript", "Python", "Django", "Git", "GitLab CI/CD"],
     status: "À venir",
