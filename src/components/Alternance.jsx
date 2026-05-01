@@ -130,7 +130,7 @@ export default function Alternance() {
               </p>
               <p className="mt-3 text-base leading-7 text-stone-700">
                 Une base solide en développement web (React, Django), en
-                analyse de données et en gestion de projet — avec la capacité
+                analyse de données et en gestion de projet, avec la capacité
                 de comprendre à la fois le code et les besoins fonctionnels.
               </p>
             </div>
