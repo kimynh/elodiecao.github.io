@@ -61,7 +61,7 @@ export default function Alternance() {
               <img
                 src={dauphinelogo}
                 alt="Université Paris Dauphine - PSL"
-                className="h-14 w-auto object-contain"
+                className="mx-auto h-14 w-auto object-contain"
               />
               <h3 className="mt-5 text-xl font-semibold text-primary">
                 Paris Dauphine — PSL
@@ -94,7 +94,7 @@ export default function Alternance() {
               <img
                 src={sorbonneLogo}
                 alt="Panthéon Sorbonne - Université Paris 1"
-                className="h-14 w-auto object-contain"
+                className="mx-auto h-24 w-auto object-contain"
               />
               <h3 className="mt-5 text-xl font-semibold text-primary">
                 Panthéon Sorbonne — Paris 1
