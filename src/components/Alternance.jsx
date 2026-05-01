@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Handshake, MapPin } from "lucide-react";
+import { GraduationCap, Handshake, MapPin, Car } from "lucide-react";
 import dauphinelogo from "../assets/dauphine-logo.png";
 import sorbonneLogo from "../assets/sorbonne-logo.png";
 
@@ -19,6 +19,11 @@ const highlights = [
     icon: <Handshake size={18} className="text-accent" />,
     label: "Disponibilité",
     value: "Septembre 2026",
+  },
+  {
+    icon: <Car size={18} className="text-accent" />,
+    label: "Mobilité",
+    value: "Permis B",
   },
 ];
 
