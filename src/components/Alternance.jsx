@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Handshake, MapPin, Clock } from "lucide-react";
+import { GraduationCap, Handshake, MapPin } from "lucide-react";
 import dauphinelogo from "../assets/dauphine-logo.png";
 import sorbonneLogo from "../assets/sorbonne-logo.png";
 
@@ -14,11 +14,6 @@ const highlights = [
     icon: <MapPin size={18} className="text-accent" />,
     label: "Localisation",
     value: "Paris — Île-de-France",
-  },
-  {
-    icon: <Clock size={18} className="text-accent" />,
-    label: "Rythme souhaité",
-    value: "3 jours entreprise / 2 jours cours",
   },
   {
     icon: <Handshake size={18} className="text-accent" />,
@@ -82,6 +77,7 @@ export default function Alternance() {
             <div className="flex flex-wrap gap-2">
               <span className="pill-tag">Classement top 3 MIAGE</span>
               <span className="pill-tag">Réseau PSL</span>
+              <span className="pill-tag">1 sem. entreprise / 1 sem. école</span>
             </div>
           </motion.div>
 
@@ -113,6 +109,7 @@ export default function Alternance() {
             <div className="flex flex-wrap gap-2">
               <span className="pill-tag">Université historique</span>
               <span className="pill-tag">Réseau Paris 1</span>
+              <span className="pill-tag">2-3 sem. entreprise / 2-3 sem. école</span>
             </div>
           </motion.div>
 
