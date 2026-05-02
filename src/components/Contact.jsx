@@ -13,7 +13,7 @@ export default function Contact() {
         className="soft-card p-8 md:p-10"
       >
         <span className="eyebrow">Contact</span>
-        <h2 className="section-title mt-5">Discutons de votre équipe, d’un stage ou d’une alternance.</h2>
+        <h2 className="section-title mt-5">Discutons de votre équipe, de vos projets ou d’une alternance.</h2>
         <p className="section-copy">
           Je suis ouverte aux échanges autour des systèmes d’information, du développement et des opportunités pour 2026.
         </p>
